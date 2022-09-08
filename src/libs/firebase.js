@@ -13,8 +13,5 @@ const options = {
 const firebase = initializeApp(options)
 const firestore = getFirestore(firebase)
 
-console.log('firebase', firebase)
-console.log('firestore', firestore)
-
 export { firebase, firestore }
 
