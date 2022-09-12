@@ -13,5 +13,5 @@ const options = {
 const firebase = initializeApp(options)
 const firestore = getFirestore(firebase)
 
-export { firebase, firestore }
+export { firestore }
 
