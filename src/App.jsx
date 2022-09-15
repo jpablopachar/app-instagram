@@ -4,6 +4,7 @@ import './App.css'
 import { PrivateRoutes, PublicRoutes } from './constant'
 import { UserContext } from './context'
 import { useAuth } from './hooks/useAuth'
+import ProtectedRoute from './layouts/Protected-Route'
 import { Dashboard, Login, Profile, SignUp } from './pages'
 
 // const Login = lazy(() => import('./pages/login'))
@@ -19,7 +20,9 @@ function App () {
             <Route path={PublicRoutes.LOGIN} element={<Login/>}/>
             <Route path={PublicRoutes.SIGN_UP} element={<SignUp/>}/>
             <Route path={PublicRoutes.PROFILE} element={<Profile/>}/>
-            <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard/>}/>
+            <Route path={PrivateRoutes.DASHBOARD} element={<ProtectedRoute/>}>
+              <Route index element={<Dashboard/>}/>
+            </Route>
           </Routes>
         </Suspense>
       </BrowserRouter>

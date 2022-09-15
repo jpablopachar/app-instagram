@@ -8,7 +8,7 @@ export const useUser = (userId) => {
     async function getUserObjByUserId (userId) {
       const [user] = await firebaseServices.getUserByUserId(userId)
 
-      setActiveUser(user || [])
+      setActiveUser(user || {})
     }
 
     if (userId) {

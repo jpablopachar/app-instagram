@@ -5,8 +5,8 @@ const Dashboard = () => {
     <div className="bg-gray-50">
       <Header/>
       <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
-        <Timeline />
-        <Sidebar />
+        <Timeline/>
+        <Sidebar/>
       </div>
     </div>
   )
